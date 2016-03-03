@@ -4,6 +4,7 @@ gem "devise"
 gem "simple_form"
 gem "bootstrap-sass"
 gem "carrierwave"
+gem "font-awesome-rails"
 
 gem "mini_magick"
 

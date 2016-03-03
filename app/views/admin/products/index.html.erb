@@ -7,7 +7,8 @@
   <table class="table table-hover">
     <thead>
       <tr>
-      
+       <td>#</td>
+        <td>pic</td>
         <td>Title</td>
         <td>Description</td>
          <td>Quantity</td>
@@ -17,7 +18,18 @@
     <tbody>
       <% @products.each do |product| %>
         <tr>
-         
+          <td>
+          <%= product.id %>
+        </td>
+        <td>
+          <%= link_to product_path(product) do %>
+            <% if product.photo.present? %>
+              <%= image_tag(product.photo.image.thumb.url, class: "thumbnail") %>
+            <% else %>
+              <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+            <% end %>
+          <% end %>
+        </td>
           <td><%= link_to(product.title, admin_product_path(product)) %></td>
           <td><%= product.description %></td>
            <td><%= product.quantity %></td>
