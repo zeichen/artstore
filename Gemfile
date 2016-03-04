@@ -12,9 +12,13 @@ gem "mini_magick"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
 # Use sqlite3 as the database for Active Record
+<<<<<<< HEAD
 
 gem 'sqlite3', group: :development
 
+=======
+gem 'sqlite3', group: :development
+>>>>>>> 8ba5ecafa4b846be3fde8ade4fdfd22edd059451
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -33,6 +37,11 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+group :production do
+  gem "pg"
+  gem "rails_12factor"
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -47,6 +56,14 @@ end
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+<<<<<<< HEAD
+=======
+
+gem "devise"
+
+gem "bootstrap-sass"
+
+>>>>>>> 8ba5ecafa4b846be3fde8ade4fdfd22edd059451
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

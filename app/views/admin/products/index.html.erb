@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <div class="col-md-12">
@@ -45,3 +46,11 @@
   </table>
 </div>
 
+=======
+<ul>
+  <% @products.each do |product| %>
+
+    <li> <%= link_to(product.title, admin_product_path(product)) %> </li>
+  <% end %>
+</ul>
+>>>>>>> 8ba5ecafa4b846be3fde8ade4fdfd22edd059451

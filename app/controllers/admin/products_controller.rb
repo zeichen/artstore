@@ -1,4 +1,5 @@
 class Admin::ProductsController < ApplicationController
+<<<<<<< HEAD
 	layout "admin"
 	
 	before_action :authenticate_user!
@@ -40,6 +41,21 @@ class Admin::ProductsController < ApplicationController
 
 
 	def create
+=======
+
+  before_action :authenticate_user!
+  before_action :admin_required
+
+  def index
+    @products = Product.all
+  end
+
+  def new
+    @product = Product.new
+  end
+
+  def create
+>>>>>>> 8ba5ecafa4b846be3fde8ade4fdfd22edd059451
     @product = Product.new(product_params)
 
     if @product.save
@@ -52,6 +68,10 @@ class Admin::ProductsController < ApplicationController
   private
 
   def product_params
+<<<<<<< HEAD
     params.require(:product).permit(:title, :description, :quantity, :price, photo_attributes: [:image, :id])
+=======
+    params.require(:product).permit(:title, :description, :quantity, :price)
+>>>>>>> 8ba5ecafa4b846be3fde8ade4fdfd22edd059451
   end
 end

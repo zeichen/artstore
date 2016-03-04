@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+<<<<<<< HEAD
          def admin?
          	is_admin
          end
@@ -16,4 +17,9 @@ class User < ActiveRecord::Base
       	 self.update_columns(is_admin: false)
       	end
       	
+=======
+  def admin?
+    is_admin
+  end
+>>>>>>> 8ba5ecafa4b846be3fde8ade4fdfd22edd059451
 end
